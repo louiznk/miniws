@@ -1,11 +1,11 @@
-# Mini webservice with spring-boot … [![Build Status](https://travis-ci.org/vdemeester/miniws.svg)](https://travis-ci.org/vdemeester/miniws)
+# Mini webservice with spring-boot … [![Build Status](https://travis-ci.org/yyekhlef/miniws.svg?branch=master)](https://travis-ci.org/yyekhlef/miniws.svg?branch=master)
 
 … with toggle feature using ToggleZ
 
 ## Run and test it
 
 ```bash
-$ ./gradlew runBoot
+$ ./gradlew bootRun
 # […]
 ```
 

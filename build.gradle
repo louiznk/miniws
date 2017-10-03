@@ -3,14 +3,14 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.3.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.5.7.RELEASE")
     }
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
-apply plugin: 'spring-boot'
+apply plugin: 'org.springframework.boot'
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
@@ -33,18 +33,17 @@ dependencies {
     testCompile("org.springframework.boot:spring-boot-starter-test")
 //    compile 'org.springframework:spring-web:4.1.6.RELEASE'
 //    compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
-    compile 'com.fasterxml.jackson.core:jackson-databind:2.5.3'
-    compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.4.0'
-    compile 'com.google.guava:guava:18.0'
+//    compile 'com.fasterxml.jackson.core:jackson-databind:2.5.3'
+//    compile 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.4.0'
+    compile 'com.google.guava:guava:23.0'
     compile 'org.slf4j:slf4j-api:1.7.2'
-    compile 'org.togglz:togglz-core:2.1.0.Final'
-    compile 'org.togglz:togglz-spring:2.1.0.Final'
+    compile 'org.togglz:togglz-spring-web:2.4.1.Final'
     // Tests
     testCompile 'junit:junit:4.12'
     testCompile 'org.assertj:assertj-core:3.0.0'
-    testCompile 'org.springframework:spring-test:4.1.6.RELEASE'
+    testCompile 'org.springframework:spring-test:5.0.0.RELEASE'
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '2.3'
+    gradleVersion = '4.2'
 }

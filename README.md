@@ -5,7 +5,7 @@
 ## Run and test it
 
 ```bash
-$ ./gradlew run
+$ ./gradlew bootRun
 # […]
 ```
 

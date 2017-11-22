@@ -3,11 +3,12 @@ package com.github.vdemeester.miniws.controller;
 import com.github.vdemeester.miniws.feature.MiniwsFeatures;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import org.togglz.core.manager.FeatureManager;
 
 import java.time.LocalDateTime;
 
@@ -16,6 +17,9 @@ import java.time.LocalDateTime;
 public class DateController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DateController.class);
+
+    @Autowired
+    private FeatureManager manager;
 
     @RequestMapping(method = RequestMethod.GET)
     public

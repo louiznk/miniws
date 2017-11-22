@@ -1,6 +1,5 @@
 package com.github.vdemeester.miniws.controller;
 
-import com.github.vdemeester.miniws.feature.MiniwsFeatures;
 import com.github.vdemeester.miniws.model.Todo;
 import com.github.vdemeester.miniws.service.TodoService;
 import org.slf4j.Logger;
@@ -11,9 +10,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+import org.togglz.core.manager.FeatureManager;
 
 import java.util.List;
+
+import static com.github.vdemeester.miniws.feature.MiniwsFeatures.TODO_FEATURE;
 
 @Controller
 @RequestMapping("/todos")
@@ -22,6 +23,9 @@ public class TodoController {
     private static final Logger LOGGER = LoggerFactory.getLogger(TodoController.class);
 
     private final TodoService todoService;
+
+    @Autowired
+    private FeatureManager manager;
 
     @Autowired
     public TodoController(TodoService todoService) {
